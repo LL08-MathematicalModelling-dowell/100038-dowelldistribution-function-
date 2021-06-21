@@ -1,0 +1,28 @@
+start							
+	Call dowelldistribution function(distribution(x=0,1,2),split)						
+							
+	Define split as variable 						
+		Input from frontend programmer or user					
+	Define distribution as variable "x"						
+	if x=0						
+		normal distribution is selected					
+	if x=1						
+		poisson distribution is selected					
+	if x=2						
+		Display choices for distribution -" poisson distribution,normal distribution"					
+			user need to select a distribution				
+							
+			if normal distribution is selected,				
+				nothing change will happen,everything will remain same			
+			if poisson distribution is selected,				
+				Specify the split for which data to be selected			
+					Input from user		
+					Depending on the selected split,fetch the  data from the database within the time limt		
+						for eg, if one hour split in case of time is selected, then take hourly data within prescribed time limit from the database	
+							
+					Minimum sample size  for each subset should be atleast 30		
+					if not ,prompt " sample size is not adequate"		
+						Call dowellsamplingrule function()	
+							
+							
+		Function output(distribution,split,adequacy of data,required data)					
